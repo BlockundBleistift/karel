@@ -1,0 +1,32 @@
+void solveTheMaze ()
+{ 
+    follower ();
+}
+void follower ()
+{
+    while (!onBeeper())
+    {
+        while (!onBeeper() && !frontIsClear() && !leftIsClear())
+        {
+            turnRight();
+        }
+        while (!onBeeper() && !frontIsClear() && !rightIsClear())
+        {
+            turnLeft();
+        }
+        while (!onBeeper() && !frontIsClear())
+        {
+            turnLeft();
+        }
+        while (!onBeeper() && !rightIsClear() && !leftIsClear())
+        {
+            moveForward();
+        }
+        
+        while (!onBeeper() && frontIsClear())
+        {
+            moveForward();
+        }
+    }
+    
+}

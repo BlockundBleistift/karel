@@ -1,0 +1,21 @@
+void karelsFirstProgram ()
+{
+    while (frontIsClear() && !onBeeper())
+    {
+        moveForward();
+    }
+    while (frontIsClear() && onBeeper())
+    {
+        pickBeeper();
+        moveForward();
+    }    
+    while (!frontIsClear())
+    {
+        turnLeft();
+        moveForward();
+        turnRight();
+        moveForward();
+        dropBeeper();
+    }
+    moveForward();
+}

@@ -1,6 +1,6 @@
 void defuseOneBomb ()
 {
-    while (frontIsClear() && !onBeeper() && !beeperAhead())
+    while (frontIsClear())
     {
         while (frontIsClear() && !onBeeper())
         {

@@ -1,0 +1,15 @@
+void defuseOneBomb ()
+{
+    while (frontIsClear() && !onBeeper() && !beeperAhead())
+    {
+        while (frontIsClear() && !onBeeper())
+        {
+            moveForward();
+        }
+        while (!frontIsClear() && onBeeper())
+        {
+            pickBeeper();
+            turnAround();
+        }
+    }
+}

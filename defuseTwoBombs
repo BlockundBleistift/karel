@@ -1,0 +1,22 @@
+void defuseTwoBombs ()
+{
+    while (frontIsClear())
+    {
+        repeat (9)
+        {
+            moveForward();
+        }
+        while (!frontIsClear() && onBeeper())
+        {
+            turnAround();
+        }
+        while (onBeeper())
+        {
+            pickBeeper();
+        }
+        while (!frontIsClear() && !leftIsClear())
+        {
+            turnRight();
+        }
+    }
+}
